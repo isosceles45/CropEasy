@@ -4,21 +4,22 @@ import numpy as np
 
 app = Flask(__name__)
 
-model=pickle.load(open('randomforrest2.pkl','rb'))
-
 @ app.route('/')
 def home():
     title = 'Crop Easy - Home'
     return render_template('index.html', title=title)
 
-@ app.route('/')
+@ app.route('/crop-recommend')
+def crop_recommend():
+    title = 'Harvestify - Crop Recommendation'
+    return render_template('crop.html', title=title)
+
+@ app.route('/contact')
 def home():
     title = 'Crop Easy - Contact'
     return render_template('contact.html', title=title)
 
-@app.route('/')
-def crop_recommend():
-    return render_template("crop.html")
+model=pickle.load(open('randomforrest2.pkl','rb'))
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
