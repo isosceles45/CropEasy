@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Easy</title>
+    <link rel="stylesheet" href="../static/style2.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="../static/images/cropeasy.png" alt="LOGO">
+        </div>
+        <ul class="nav-area">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="crop.html">Crops</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div>
+        <form action='/predict' method="post" class="col s12">
+        <div class="section no-pad-bot">
+            <h2 style="margin-left: 39%; padding-bottom: 10px;color: #fff; margin-bottom: 20px;" >Input for Crop Recommendation</h2>
+          
+              <div class="input-field col s4">
+                <input type="text" name="N" required="">
+                <label style="color: #fff; margin-left: 40%; font-weight: bolder">N</label>
+              </div>
+              <div class="input-field col s4">
+                <input type="text" name="P" required="">
+                <label style="color: #fff; margin-left: 40%; font-weight: bolder">P</label>
+                <div class="input-field col s4">
+                    <input type="text" name="K" required="">
+                    <label style="color: #fff; margin-left: 40%; font-weight: bolder">K</label>
+                <div class="input-field col s4">
+                        <input type="text" name="Temperature" required="">
+                        <label style="color: #fff; margin-left: 40%; font-weight: bolder">temperature</label>
+                <div class="input-field col s4">
+                <input type="text" name="Humidity" required="">
+                <label style="color: #fff; margin-left: 40%; font-weight: bolder">Ph</label>
+                <div class="input-field col s4">
+                    <input type="text" name="humidity" required="">
+                    <label style="color: #fff; margin-left: 40%; font-weight: bolder">humidity</label>
+                    <div class="input-field col s4">
+                        <input type="text" name="rainfall" required="">
+                        <label style="color: #fff; margin-left: 40%; font-weight: bolder">rainfall</label>                 
+              </div>
+              <button type="submit">SUBMIT</button>
+            </form>
+          </div>
+          <p style="color: #fff; margin-left: 40%; font-size: 25px; margin-top: 10px; font-weight: bolder">Your Crop Prediction is:</p>
+          <div class="output">{{output}}</div>
+</div>
+</body>
+</html>
