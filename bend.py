@@ -15,7 +15,7 @@ def crop_recommend():
     return render_template('crop.html', title=title)
 
 @ app.route('/contact')
-def home():
+def contact():
     title = 'Crop Easy - Contact'
     return render_template('contact.html', title=title)
 
