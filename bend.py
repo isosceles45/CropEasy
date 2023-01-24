@@ -1,5 +1,6 @@
 from flask import Flask,request, url_for, redirect, render_template
 import pickle
+import streamlit as st
 import numpy as np
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ def home():
 
 @ app.route('/crop-recommend')
 def crop_recommend():
-    title = 'Harvestify - Crop Recommendation'
+    title = 'Crop Easy - Crop Recommendation'
     return render_template('crop.html', title=title)
 
 @ app.route('/contact')
