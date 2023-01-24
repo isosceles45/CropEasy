@@ -1,1 +1,1 @@
-web: gunicorn bend:app
+web: sh setup.sh && streamlit run bend.py
